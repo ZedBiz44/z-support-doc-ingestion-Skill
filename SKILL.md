@@ -1,6 +1,6 @@
 ---
 name: z-support-doc-ingestion
-description: "Use for official help centres, support articles, docs, or videos: build agent-owned shared-wiki expertise and prove live retrieval."
+description: "Use when asked to become an in-house expert: research official help centres, support articles, tutorials, or videos and save verified shared-wiki guidance."
 ---
 
 # Support Doc Ingestion
