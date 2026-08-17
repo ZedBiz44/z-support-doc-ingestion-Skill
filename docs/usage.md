@@ -10,7 +10,7 @@ Tell the agent who should become the expert:
 
 That is all.
 
-You do not need to use `$support-doc-ingestion`, a slash command, a wiki path, a GitHub record, a special test question, or a transfer command. You also do not need to name Amanda, Wilma, Marsha, or any other example agent. Send the same sentence directly to whichever agent should own the expertise.
+You do not need to use a special skill command, a slash command, a wiki path, a GitHub record, a special test question, or a transfer command. You also do not need to name Amanda, Wilma, Marsha, or any other example agent. Send the same sentence directly to whichever agent should own the expertise.
 
 ## What the Research Agent Does
 

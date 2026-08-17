@@ -1,6 +1,6 @@
 ---
-name: support-doc-ingestion
-description: Become the in-house expert for a tool by researching its support documentation, saving useful knowledge in your own wiki, and returning a concise completion summary.
+name: z-support-doc-ingestion
+description: Research or refresh official support docs, save reliable knowledge in an agent wiki, and validate practical answers.
 ---
 
 # Support Doc Ingestion

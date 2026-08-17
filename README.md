@@ -2,7 +2,7 @@
 
 Date: 2026-08-17 | Agent: Cody | Status: Initial repo setup
 
-This repo is the version-controlled home for the `support-doc-ingestion` skill.
+This repo is the version-controlled home for the `z-support-doc-ingestion` skill.
 
 The skill helps ZedBiz/OpenClaw agents research tool and program documentation, prove coverage, store the finished documentation in the right individual agent wiki, and log the work so other agents can find or request it later.
 
@@ -26,7 +26,7 @@ OpenClaw skills are discovered from configured skill roots when a `SKILL.md` fil
 Typical install layout:
 
 ```plain text
-<workspace>/skills/support-doc-ingestion/SKILL.md
+<workspace>/skills/z-support-doc-ingestion/SKILL.md
 ```
 
 This repo keeps the installable skill at:

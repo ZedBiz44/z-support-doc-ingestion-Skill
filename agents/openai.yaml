@@ -1,4 +1,4 @@
 interface:
-  display_name: "Support Doc Ingestion"
-  short_description: "Research tool docs, prove coverage, ingest into agent wikis, and log the work"
-  default_prompt: "Use $support-doc-ingestion to research, ingest, verify, transfer, or refresh tool documentation for the correct OpenClaw agent wiki."
+  display_name: "Z Support Doc Ingestion"
+  short_description: "Research official docs and build verified wiki expertise"
+  default_prompt: "Use $z-support-doc-ingestion to research official support documentation and build reliable knowledge in your own wiki."

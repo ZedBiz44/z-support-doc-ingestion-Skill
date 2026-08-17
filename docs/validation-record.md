@@ -1,10 +1,10 @@
 # Validation Record
 
-Date: 2026-08-17 | Agent: Cody | Status: Passed Initial Repo Validation
+Date: 2026-08-17 | Agent: Manus | Status: Structural Validation Passed, Fresh Pilot Pending
 
 ## Scope
 
-Initial validation of `ZedBiz44/z-support-doc-ingestion-Skill` after repo setup.
+Initial repository validation followed by metadata correction for the `z-support-doc-ingestion` package.
 
 ## Checks
 
@@ -12,8 +12,11 @@ Initial validation of `ZedBiz44/z-support-doc-ingestion-Skill` after repo setup.
 - Default branch is `main`: pass
 - Root `SKILL.md` exists: pass
 - `SKILL.md` starts with YAML frontmatter: pass
-- `name: support-doc-ingestion` present: pass
-- Description present and usable as trigger contract: pass
+- `name: z-support-doc-ingestion` present: pass
+- Shared description is 116 characters and passes the 160-character limit: pass
+- Codex short description is 56 characters and passes the 25 to 64-character adapter limit: pass
+- `agents/openai.yaml` default prompt matches `$z-support-doc-ingestion`: pass
+- Canonical structural validator passes when packaged in the correctly named `z-support-doc-ingestion` folder: pass
 - `When To Stop And Ask` section present: pass
 - References section present: pass
 - Operator usage guide present: pass
@@ -32,7 +35,7 @@ Initial validation of `ZedBiz44/z-support-doc-ingestion-Skill` after repo setup.
 
 ## Notes
 
-This validation confirms packaging, tracking-repository structure, and source-of-truth labels only. Live OpenClaw installation and `openclaw skills list` verification still need to be run on the target OpenClaw host or workspace where the skill will be installed.
+This validation confirms repository structure and corrected metadata. A fresh OpenClaw pilot on the current committed artifact, discovery verification, and positive, paraphrased, boundary, and negative trigger tests remain required before wider deployment.
 
 ## Reference Links Checked
 
