@@ -37,6 +37,18 @@ Initial repository validation followed by metadata correction for the `z-support
 
 This validation confirms repository structure and corrected metadata. A fresh OpenClaw pilot on the current committed artifact, discovery verification, and positive, paraphrased, boundary, and negative trigger tests remain required before wider deployment.
 
+## 2026-08-17 Update Validation
+
+Status: Passed
+
+- ZedBiz agent-specific documentation wiki path rule present: pass
+- Shared default wiki status caveat present: pass
+- Retrieval proof replaces practical-question self-test in active skill files: pass
+- Research-agent GitHub responsibility removed from active workflow language: pass
+- Notion SOP updated with optional-only back-office assignment and completed-research records: pass
+- Notion Skill page updated so compile/verify completion uses retrieval proof instead of GitHub test-result logging: pass
+- Live Wilma reinstall still required after commit to test the newest skill version: pending
+
 ## Reference Links Checked
 
 - OpenClaw Skills: https://docs.openclaw.ai/tools/skills

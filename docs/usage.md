@@ -6,17 +6,17 @@ Date: 2026-08-17 | Agent: Manus | Status: Simplified
 
 Tell the agent who should become the expert:
 
-> Go through the official support documentation for **[tool]** and become our in-house expert. Save the useful knowledge in your own wiki and let me know when you can answer practical questions about it.
+> Go through the official support documentation for **[tool]** and become our in-house expert. Save the useful knowledge in your agent documentation wiki and let me know when the saved documentation is findable and usable.
 
 That is all.
 
-You do not need to use a special skill command, a slash command, a wiki path, a GitHub record, a special test question, or a transfer command. You also do not need to name Amanda, Wilma, Marsha, or any other example agent. Send the same sentence directly to whichever agent should own the expertise.
+Use the same plain-English sentence directly with whichever agent should own the expertise. The skill command, wiki path, GitHub record, test question, transfer command, and named-agent examples are handled by the system or coordinator workflow when needed.
 
 ## What the Research Agent Does
 
-The agent finds the official documentation, checks Context7 when useful, organizes useful knowledge in its own wiki, validates that the knowledge is searchable, and tests itself with a practical question. It then sends you a short summary of what it learned, where it saved it, and any meaningful gaps.
+The agent finds the official documentation, checks Context7 when useful, organizes useful knowledge in its ZedBiz agent-specific documentation wiki, validates that the knowledge is searchable, and proves it can retrieve the saved files. It then sends you a short summary of what it learned, where it saved it, the search phrase/files used for retrieval proof, and any meaningful gaps.
 
-The research agent does not use GitHub for this workflow.
+GitHub tracking sits in the coordinator lane, after the research agent reports completion.
 
 ## When Another Agent Needs Existing Knowledge
 
@@ -24,7 +24,7 @@ Tell a coordinator, manager agent, or administrator:
 
 > Check whether any agent already has useful documentation for **[tool]**. If so, give **[target agent]** access to it instead of having them research it again.
 
-The coordinator checks the tracking index when available and arranges the transfer. The research agent does not need to know GitHub, source paths, `cp`, or `rsync` commands.
+The coordinator checks the tracking index when available and arranges the transfer. GitHub, source paths, `cp`, and `rsync` stay in the coordinator lane.
 
 ## What the Back Office Tracks
 
@@ -36,4 +36,4 @@ It does not hold scraped documentation and it is not work that a research agent 
 
 A useful completion message is short:
 
-> I researched **[tool]**, saved the useful documentation in my wiki, and verified that I can find and use it. I can now help with **[key capabilities]**. Known gaps: **[gaps or none]**.
+> I researched **[tool]**, saved the useful documentation in my agent documentation wiki, and verified that I can find it again. Retrieval proof: searched **[phrase]** and found **[files]**. Known gaps: **[gaps or none]**.

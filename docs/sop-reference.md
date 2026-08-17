@@ -13,12 +13,12 @@ The goal is to make one chosen agent the reliable in-house expert for a tool, pl
 | Role | Responsibility |
 |---|---|
 | Jack or task owner | Gives a plain-English instruction directly to the agent who should become the expert. |
-| Research agent | Researches, saves useful knowledge in its own wiki, validates it, and returns a concise completion summary. It does not use GitHub. |
+| Research agent | Researches, saves useful knowledge in its ZedBiz agent-specific documentation wiki, validates it, and returns a concise completion summary. It does not use GitHub. |
 | Coordinator, automation, or administrator | Optional back-office role that maintains the tracking index and coordinates reuse or transfers. |
 
 ## Simple Assignment
 
-> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in your own wiki and let me know when you can answer practical questions about it.
+> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in your agent documentation wiki and let me know when the saved documentation is findable and usable.
 
 Jack does not need to provide a wiki path, skill command, GitHub task, test question, or transfer method.
 
@@ -26,9 +26,9 @@ Jack does not need to provide a wiki path, skill command, GitHub task, test ques
 
 - Check Context7 when useful, then use official documentation as the authority.
 - Discover the official documentation structure and cover meaningful product sections.
-- Save useful, source-backed knowledge in the agent’s own wiki using flat tool-prefixed filenames.
-- Run wiki status, compile, lint, and a relevant search in the correct wiki context.
-- Create and answer one practical question using only the wiki.
+- Save useful, source-backed knowledge in the agent-specific documentation wiki path: `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
+- Treat the agent-specific documentation wiki path as the support-doc target even when the default OpenClaw wiki status points to the shared wiki.
+- Run compile, lint, a relevant search, and retrieval proof against the saved support documentation.
 - Return what was learned, where it was saved, validation result, and any meaningful gaps.
 
 ## Documentation Reuse

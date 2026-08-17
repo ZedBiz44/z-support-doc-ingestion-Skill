@@ -9,28 +9,28 @@ description: Research or refresh official support docs, save reliable knowledge 
 
 Use this skill when you are asked to learn a tool, platform, program, plugin, API, or workflow from its support documentation.
 
-Your job is simple: research the official documentation, save useful knowledge in **your own wiki**, make sure you can retrieve it, and report back when you can answer practical questions about the tool.
+Your job is simple: research the official documentation, save useful knowledge in **your own ZedBiz agent documentation wiki**, make sure you can retrieve it, and report back when the saved documentation is findable and usable.
 
-You do **not** need GitHub access. You do not need to create an assignment record. You do not need to know another agent’s wiki path unless a coordinator specifically asks you to transfer documentation.
+GitHub tracking, assignment records, and other agents' wiki paths belong to the coordinator workflow. A normal research task only needs the tool scope, source documentation, agent-specific documentation wiki, validation, retrieval proof, and completion summary.
 
 ## What a Normal Assignment Looks Like
 
 A task owner may say:
 
-> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in your own wiki and let me know when you can answer practical questions about it.
+> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in your agent documentation wiki and let me know when the saved documentation is findable and usable.
 
 An official documentation link may be included. If it is not, find the official documentation yourself. Ask for clarification only when the product, source, or intended scope is unclear.
 
 ## Core Rules
 
-- Save finished documentation in your own agent wiki, not the shared main wiki.
-- Discover your configured wiki location from your operating context. Do not ask Jack to provide it.
+- Save finished support documentation in the ZedBiz agent-specific documentation wiki path: `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
+- Treat the ZedBiz agent-specific documentation wiki path as the support-doc target even when the default OpenClaw wiki status points to the shared wiki.
 - Use flat, tool-prefixed filenames such as `entities/toolname_feature.md`.
 - Check Context7 first for fast discovery when it is available. Official documentation remains the authority.
 - Keep source links, warnings, limits, authentication details, version notes, and deprecation notices.
-- Do not copy `.openclaw-wiki/cache/` between wikis.
-- Do not claim completion until your wiki passes compile, lint, search, and a practical self-test.
-- Do not use GitHub as part of this research task. A coordinator or automation may track the result later.
+- Leave `.openclaw-wiki/cache/` out of wiki transfers.
+- Report completion only after your wiki passes compile, lint, search, and retrieval proof.
+- Keep GitHub tracking in the coordinator or automation lane after the research summary is reported.
 
 ## Where Knowledge Goes
 
@@ -45,7 +45,7 @@ Use the standard sections in your own wiki:
 | `reports/` | Coverage or research reports |
 | `_attachments/` | Supporting files and converted assets |
 
-Do not create nested tool folders. Use the tool name at the start of every filename.
+Use the tool name at the start of every filename and keep tool files flat inside the standard wiki sections.
 
 ## Research Workflow
 
@@ -53,7 +53,7 @@ Do not create nested tool folders. Use the tool name at the start of every filen
 
 Check Context7 first when available. Then find the official documentation home, navigation, sitemap, API references, guides, troubleshooting material, changelog, release notes, and downloadable manuals.
 
-Use at least two ways to discover documentation sections, such as a sitemap, documentation navigation, internal search, or the documentation repository. Do not assume the top page is the full product documentation.
+Use at least two ways to discover documentation sections, such as a sitemap, documentation navigation, internal search, or the documentation repository. Treat the top page as an entry point, then verify the full documentation structure.
 
 Use PDFs, release notes, official blogs, community discussions, and videos only when they add something useful beyond official documentation. Label supplemental material clearly and use the official docs when sources conflict.
 
@@ -78,7 +78,13 @@ status: verified | partial | stale
 
 ### Validate Your Wiki
 
-First confirm that the current command context points to your own wiki. If it does not, stop and correct the context before continuing.
+First confirm that the files were saved in your ZedBiz agent-specific documentation wiki path:
+
+```plain text
+/opt/openclaw/shared/knowledge/<agent-name>/wiki
+```
+
+Treat this path as the support-doc target even when the default OpenClaw wiki status points to the shared wiki.
 
 Run the applicable wiki checks:
 
@@ -90,7 +96,7 @@ openclaw wiki lint
 openclaw wiki search "relevant tool question" --mode source-evidence
 ```
 
-Then create one practical question a real user would ask about the tool. Answer it using only your wiki. Your answer must identify a source file, avoid invented steps, and state any gaps or uncertainty.
+Then run a retrieval proof: search the saved wiki content for the tool, open at least one saved source or synthesis file, and confirm the documentation is findable and usable. Record the search phrase, files found, and any known gaps.
 
 ## Your Completion Summary
 
@@ -98,18 +104,19 @@ When complete, return a short plain-English summary containing:
 
 - What tool or support area you researched.
 - What you learned and where you saved it in your wiki.
-- Confirmation that compile, lint, search, and the practical self-test passed.
+- Confirmation that compile, lint, search, and retrieval proof passed.
+- Retrieval proof details: search phrase used, files found, and any known gaps.
 - Important gaps, blocked pages, or limits, or a clear statement that there are no known gaps.
 
-If a major documentation section was skipped, report the work as **partial**, not complete.
+If a major documentation section was skipped, report the work as **partial**.
 
 ## Transfers
 
 Only transfer documentation when a coordinator specifically asks. The coordinator supplies the source agent and the receiving agent.
 
-Transfer the full relevant bundle, checking `sources/`, `entities/`, `concepts/`, `syntheses/`, `reports/`, and `_attachments/`. On the same VPS, use `cp -a`. Across VPSs, use `rsync` over SSH. Never copy `.openclaw-wiki/cache/`.
+Transfer the full relevant bundle, checking `sources/`, `entities/`, `concepts/`, `syntheses/`, `reports/`, and `_attachments/`. On the same VPS, use `cp -a`. Across VPSs, use `rsync` over SSH. Leave `.openclaw-wiki/cache/` behind because the receiving wiki rebuilds it.
 
-After a transfer, validate the receiving wiki with compile, lint, search, and a practical self-test. Send the coordinator a short transfer summary.
+After a transfer, validate the receiving wiki with compile, lint, search, and retrieval proof. Send the coordinator a short transfer summary.
 
 ## When to Stop and Ask
 
@@ -118,7 +125,7 @@ Stop and ask for clarification when:
 - The product, official source, or research scope is unclear.
 - Documentation is login-gated, paid, private, client-sensitive, or access-restricted.
 - A transfer might mix private content into another agent’s wiki.
-- You cannot verify your own wiki context.
+- You cannot verify the ZedBiz agent-specific documentation wiki path.
 - Coverage cannot be reasonably established.
 - Compile or lint fails in a way that may require structural wiki changes.
 - Supplemental sources conflict with official documentation and the correct answer is unclear.
