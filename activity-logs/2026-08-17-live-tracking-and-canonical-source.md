@@ -13,6 +13,7 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 - Added the six live tracking folders with usage guidance.
 - Added an agent wiki index template.
 - Updated the installable skill, repository instructions, README, operator usage guide, SOP reference, and validation record to reflect the decisions.
+- Added a direct canonical-source label to the Notion SOP so it explicitly controls when it differs from the repository reference summary.
 - Restricted `activity-logs/` to repository-maintenance history, not research-task tracking.
 
 ## Outstanding Verification
