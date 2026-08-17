@@ -1,10 +1,10 @@
 # Support Doc Ingestion Skill
 
-Date: 2026-08-17 | Agent: Cody | Status: Initial repo setup
+Date: 2026-08-17 | Agent: Cody and Manus | Status: Shared-Vault Model
 
 This repo is the version-controlled home for the `z-support-doc-ingestion` skill.
 
-The skill helps ZedBiz/OpenClaw agents research tool and program documentation, prove coverage, store the finished documentation in the right individual agent wiki, and log the work so other agents can find or request it later.
+The skill helps ZedBiz/OpenClaw agents research tool and program documentation, prove coverage, save public reusable knowledge in the active shared wiki under an agent-owned namespace, and report completion without requiring research agents to use GitHub.
 
 ## Source Of Truth
 
@@ -15,7 +15,10 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 - This repo is the authoring and tracking source for the skill, usage notes, templates, setup records, and live documentation-research records.
 - The generated deployable package is `dist/z-support-doc-ingestion/`; install that package, not the repository root.
 - This repo is not the warehouse for every scraped documentation page.
-- Finished documentation belongs in the researching agent’s individual wiki, following `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
+- Public reusable vendor documentation belongs in the active shared wiki, organized under `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
+- Agent ownership is expressed through the supported namespace and page metadata: `primaryAgent`, `owner`, and `scope: specialist-support-docs`.
+- Private, client-sensitive, paid, or login-gated material belongs in an approved restricted store, not the shared vault.
+- Same-VPS reuse occurs through shared-vault search. Cross-VPS and restricted-store transfers remain a coordinator responsibility.
 - Back-office tracking records in this repository tell coordinators who researched what, where it lives, what was transferred, and when it needs review. Research agents do not need GitHub access.
 - Before a workflow becomes a real skill, related Agent Knowledge and ZedBiz Biz Brain planning belongs in `ZedBiz44/ZedBiz-Biz-Brain-System`.
 - Once a workflow becomes this skill, this repo becomes the skill source of truth.
@@ -47,8 +50,8 @@ dist/z-support-doc-ingestion/
 - `SKILL.md`: authoritative shared skill instructions.
 - `agents/openai.yaml`: authoritative Codex/OpenAI interface metadata.
 - `scripts/build_package.sh`: generates the minimal `dist/z-support-doc-ingestion/` deployable package.
-- `docs/implementation-profile.md`: ownership, platform, approval, and completion-evidence record.
-- `docs/security-rollback.md`: source boundaries, security review, rollback, and removal record.
+- `docs/implementation-profile.md`: ownership, active-vault model, platform, approval, and completion-evidence record.
+- `docs/security-rollback.md`: source boundaries, shared-vault controls, security review, rollback, and removal record.
 - `docs/pilot-test-record.md`: current-artifact discovery, trigger-test, and pilot evidence.
 - `docs/usage.md`: plain-English instructions for Jack and the research agent.
 - `docs/sop-reference.md`: SOP reference copy aligned with the Notion SOP.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Z Support Doc Ingestion"
   short_description: "Research official docs and build verified wiki expertise"
-  default_prompt: "Use $z-support-doc-ingestion to research official support documentation and build reliable knowledge in your own wiki."
+  default_prompt: "Use $z-support-doc-ingestion to research official support docs in the shared wiki under your agent namespace."

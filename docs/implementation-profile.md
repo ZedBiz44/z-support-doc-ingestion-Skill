@@ -18,11 +18,14 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 
 | Decision | Value |
 |---|---|
-| Primary job | Research official support documentation, save useful source-backed knowledge in the assigned agent’s documentation wiki, and prove retrieval. |
+| Primary job | Research official support documentation, save source-backed knowledge in the active shared wiki under an agent-owned namespace, and prove live retrieval. |
+| Active wiki vault | `/opt/openclaw/shared/knowledge/wiki` |
+| Agent-owned namespace | `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`, and `_attachments/<agent>/` when needed. |
+| Ownership metadata | `primaryAgent`, `owner`, and `scope: specialist-support-docs` on every support-documentation page. |
 | Intended users | ZedBiz OpenClaw agents performing assigned support-documentation research. |
-| Positive triggers | Learn, research, refresh, verify, or transfer support documentation for a tool, platform, plugin, API, or workflow. |
-| Non-triggers | One-off operational work, a request to use a tool without researching it, or unrelated document editing. |
-| Included actions | Public documentation research, wiki entry creation, retrieval proof, and coordinator-approved documentation transfer. |
+| Positive triggers | Learn, research, refresh, verify, or reuse support documentation for a tool, platform, plugin, API, or workflow. |
+| Non-triggers | One-off operational work, a request to use a tool without researching it, unrelated document editing, or private-content ingestion without approval. |
+| Included actions | Public documentation research, wiki entry creation, live retrieval proof, and coordinator-approved cross-VPS or restricted-store transfer. |
 | Excluded actions | Login-gated or private content without approval, credentials, client-sensitive materials, plugin/service development, and production system changes. |
 
 ## Platforms and Packaging
@@ -44,7 +47,7 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 | Human approver | Jack |
 | Pilot environment | One approved OpenClaw agent, initially Wilma only if the target state is confirmed current. |
 | Wider rollout | Only after the current commit passes discovery, trigger, pilot, and rollback checks and Jack approves expansion. |
-| Stop and escalation | Stop for unresolved source scope, access, private content, target wiki context, structural wiki failure, or source conflict. |
+| Stop and escalation | Stop for unresolved source scope, access, private content, active-vault mismatch, structural wiki failure, or source conflict. |
 | Retry limit | Three failed validation or repair attempts unless Jack sets a lower limit. |
 
 ## Security and Rollback
@@ -53,10 +56,10 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 |---|---|
 | Security review | `docs/security-rollback.md` |
 | Approved data and sources | Public official documentation, Context7, approved supplemental public sources, and approved local wiki content. |
-| Execution boundary | Only the assigned agent documentation wiki and coordinator-supplied transfer targets. |
+| Execution boundary | The active shared wiki’s supported agent namespaces and coordinator-supplied cross-VPS or restricted-store transfer targets. |
 | Last known-good commit | To be established by the first successful fresh pilot of the `z-support-doc-ingestion` package. |
 | Rollback owner | Jack or designated technical administrator. |
-| Rollback procedure | Remove or replace only the pilot package at its verified skills-root location, refresh the agent’s skill list or session, and preserve the authoring repository and evidence. |
+| Rollback procedure | Remove or replace only the pilot package at its verified skills-root location, refresh the agent’s skill list or session, and preserve the authoring repository and evidence. Wiki migrations retain a verified backup until live retrieval succeeds. |
 
 ## Completion Evidence
 

@@ -58,3 +58,19 @@ Status: Passed
 - OpenClaw Memory Wiki: https://docs.openclaw.ai/plugins/memory-wiki
 - Context7 Overview: https://context7.com/docs/overview
 - Context7 API Guide: https://context7.com/docs/api-guide
+
+## 2026-08-17 Shared-Vault Namespace Update
+
+Status: Runtime migration passed; updated skill package deployment pending.
+
+- Active Wilma vault confirmed: pass (`/opt/openclaw/shared/knowledge/wiki`)
+- Unsupported arbitrary root namespace identified and prohibited: pass (`wiki/<agent>/` is not compiler-scanned)
+- Supported recursive content-type namespaces verified: pass (`sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`)
+- WpSpectra source, entity, concept, synthesis, and report pages migrated to `*/wilma/`: pass
+- Required `primaryAgent`, `owner`, and `scope: specialist-support-docs` metadata present: pass
+- Active-vault compile recognized all six migrated WpSpectra paths: pass
+- Active-vault compile frontmatter errors: pass (none)
+- Live Wilma retrieval proof: pass for Spectra Legacy migration, matched Pro pair, cache asset regeneration, and display-conditions security
+- Shared ZedBiz retrieval regression test: pass
+- Generated indexes and internal links: pass
+- Updated `dist/z-support-doc-ingestion/` build, Wilma installation, and fresh trigger testing: pending

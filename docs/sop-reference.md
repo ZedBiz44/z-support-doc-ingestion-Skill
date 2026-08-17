@@ -1,24 +1,24 @@
 # Support Doc Ingestion SOP Reference
 
-Date: 2026-08-17 | Agent: Manus | Status: Simplified Reference
+Date: 2026-08-17 | Agent: Manus | Status: Shared-Vault Reference
 
 > **Authority split:** The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the operational source for assignment, approval, ownership, and completion. This repository is the technical source for skill instructions, metadata, generated package, and validation evidence. This file is a concise operational reference.
 
 ## Purpose
 
-The goal is to make one chosen agent the reliable in-house expert for a tool, platform, plugin, API, or program. Useful documentation is saved in that agent’s own wiki, not in the shared main wiki or GitHub.
+Make one chosen agent the reliable in-house expert for a tool, platform, plugin, API, or program without splitting its live retrieval from shared ZedBiz knowledge. Reusable public vendor documentation belongs in the active shared wiki under the research agent’s supported namespace, not in GitHub or a second unsearchable vault.
 
 ## Roles
 
 | Role | Responsibility |
 |---|---|
-| Jack or task owner | Gives a plain-English instruction directly to the agent who should become the expert. |
-| Research agent | Researches, saves useful knowledge in its ZedBiz agent-specific documentation wiki, validates it, and returns a concise completion summary. It does not use GitHub. |
-| Coordinator, automation, or administrator | Optional back-office role that maintains the tracking index and coordinates reuse or transfers. |
+| Jack or task owner | Gives a plain-English research instruction to the agent who should become the expert. |
+| Research agent | Researches, saves source-backed knowledge in its shared-vault namespace, validates live retrieval, and returns a concise completion summary. It does not use GitHub. |
+| Coordinator, automation, or administrator | Maintains optional tracking and handles approved cross-VPS or restricted-store transfers. |
 
 ## Simple Assignment
 
-> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in your agent documentation wiki and let me know when the saved documentation is findable and usable.
+> Go through the official support documentation for [tool] and become our in-house expert. Save the useful knowledge in the shared knowledge wiki under your agent namespace and let me know when the saved documentation is findable and usable.
 
 Jack does not need to provide a wiki path, skill command, GitHub task, test question, or transfer method.
 
@@ -26,16 +26,18 @@ Jack does not need to provide a wiki path, skill command, GitHub task, test ques
 
 - Check Context7 when useful, then use official documentation as the authority.
 - Discover the official documentation structure and cover meaningful product sections.
-- Save useful, source-backed knowledge in the agent-specific documentation wiki path: `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
-- Treat the agent-specific documentation wiki path as the support-doc target even when the default OpenClaw wiki status points to the shared wiki.
-- Run compile, lint, a relevant search, and retrieval proof against the saved support documentation.
-- Return what was learned, where it was saved, validation result, and any meaningful gaps.
+- Save public reusable knowledge under the active vault `/opt/openclaw/shared/knowledge/wiki`.
+- Use only supported paths: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
+- Add `primaryAgent`, `owner`, and `scope: specialist-support-docs` to every support-documentation page.
+- Do not use `wiki/<agent>/`; the Memory Wiki compiler does not scan arbitrary root-level agent folders.
+- Run compile, lint, and a practical `openclaw wiki search` from the assigned agent’s live runtime. The result must return a page in that agent’s namespace.
+- Return what was learned, the namespace used, proof paths, validation result, and meaningful gaps.
 
 ## Documentation Reuse
 
-When another agent needs an existing tool’s knowledge, Jack asks a coordinator whether anyone already knows it. The coordinator checks the tracking index if available and arranges a transfer rather than duplicate research.
+Public vendor documentation in the shared active vault is already searchable by authorized agents. Reuse it through live search instead of copying files between agents on the same VPS.
 
-Same-VPS transfers use `cp -a`; cross-VPS transfers use `rsync` over SSH. The transfer excludes `.openclaw-wiki/cache/` and is validated in the receiving wiki.
+Use approved transfer only for another VPS or a restricted private store. Exclude `.openclaw-wiki/cache/` and validate the destination’s active runtime.
 
 ## Skill Governance and Deployment
 

@@ -19,8 +19,8 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 - Coordinators, automations, or administrators store live research-task records in `assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, and `open-questions/`.
 - Research agents do not need GitHub access; they return concise completion or transfer summaries to the coordinator.
 - Do not store scraped vendor documentation, private client documentation, secrets, tokens, environment files, or full wiki exports in this repo.
-- Store finished support documentation inside the correct individual OpenClaw agent wiki.
-- Use GitHub tracking records to point to wiki paths, coverage evidence, transfer history, and refresh rules.
+- Store public reusable support documentation in the active shared wiki under the correct supported agent namespace: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, or `reports/<agent>/`. Do not use an arbitrary root-level `wiki/<agent>/` folder.
+- Use GitHub tracking records to point to shared-vault namespaces, ownership metadata, coverage evidence, cross-VPS or restricted transfers, and refresh rules.
 - For pre-skill Agent Knowledge or ZedBiz Biz Brain planning, use `ZedBiz44/ZedBiz-Biz-Brain-System` instead of this repo.
 - Verify OpenClaw command syntax against the active host before running bulk wiki ingest, compile, lint, or transfer operations.
 
