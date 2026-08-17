@@ -8,7 +8,7 @@ The skill helps ZedBiz/OpenClaw agents research tool and program documentation, 
 
 ## Source Of Truth
 
-The canonical operating SOP is the Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075). The repository file `docs/sop-reference.md` is a concise implementation reference only. If the two differ, the Notion SOP controls. Update the reference copy after an approved canonical SOP change.
+The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the operational source for assignment, approval, ownership, and completion. This repository is the technical source for `SKILL.md`, adapter metadata, deployable package, and validation evidence. `docs/sop-reference.md` is a concise operational reference.
 
 ## Repo Role
 

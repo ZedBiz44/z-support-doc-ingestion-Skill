@@ -15,3 +15,7 @@ The repository root is now explicitly the authoring and tracking source. `script
 ## Pending
 
 A fresh installation and trigger test of the current package on one approved OpenClaw pilot agent is still required before broader deployment.
+
+## Authority Alignment
+
+The Notion SOP is now the operational source for assignment, approval, ownership, and completion. This repository is the technical source for the skill, adapter metadata, deployable package, and validation evidence. Repository instructions and the concise SOP reference were aligned with that split.

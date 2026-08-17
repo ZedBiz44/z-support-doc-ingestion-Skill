@@ -2,7 +2,7 @@
 
 Date: 2026-08-17 | Agent: Manus | Status: Simplified Reference
 
-> **Canonical source:** The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the authoritative operating procedure. This file is a concise implementation reference. If the two differ, the Notion SOP controls.
+> **Authority split:** The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the operational source for assignment, approval, ownership, and completion. This repository is the technical source for skill instructions, metadata, generated package, and validation evidence. This file is a concise operational reference.
 
 ## Purpose
 
@@ -36,6 +36,10 @@ Jack does not need to provide a wiki path, skill command, GitHub task, test ques
 When another agent needs an existing tool’s knowledge, Jack asks a coordinator whether anyone already knows it. The coordinator checks the tracking index if available and arranges a transfer rather than duplicate research.
 
 Same-VPS transfers use `cp -a`; cross-VPS transfers use `rsync` over SSH. The transfer excludes `.openclaw-wiki/cache/` and is validated in the receiving wiki.
+
+## Skill Governance and Deployment
+
+The ZedBiz-owned identifier is `z-support-doc-ingestion`. Build `dist/z-support-doc-ingestion/` from the repository source and install only that generated package on a pilot agent. Maintain `docs/implementation-profile.md`, `docs/security-rollback.md`, and `docs/pilot-test-record.md` before wider rollout.
 
 ## Back-Office Tracking
 

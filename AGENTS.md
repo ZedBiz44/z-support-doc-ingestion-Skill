@@ -6,7 +6,7 @@ Date: 2026-08-17 | Agent: Cody | Status: Active
 
 This repo is the technical source for the `z-support-doc-ingestion` skill package and the permanent back-office tracking repository for support-documentation research.
 
-The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the canonical operating procedure. `docs/sop-reference.md` is a concise reference summary only; if it differs from Notion, the Notion SOP controls.
+The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the operational source for assignment, approval, ownership, and completion. This repository is the technical source for the skill, metadata, generated package, and validation evidence. `docs/sop-reference.md` is a concise operational reference only.
 
 ## Rules
 
