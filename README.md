@@ -14,7 +14,7 @@ The canonical operating SOP is the Notion [Support-Doc-Ingestion-SOP](https://ap
 
 - This repo stores the actual skill package, usage notes, templates, setup records, and the live documentation-research tracking records.
 - This repo is not the warehouse for every scraped documentation page.
-- Finished documentation belongs in the individual agent wiki, such as `/opt/openclaw/shared/knowledge/wilma/wiki` or `/opt/openclaw/shared/knowledge/amanda/wiki`.
+- Finished documentation belongs in the researching agent’s individual wiki, following `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
 - Back-office tracking records in this repository tell coordinators who researched what, where it lives, what was transferred, and when it needs review. Research agents do not need GitHub access.
 - Before a workflow becomes a real skill, related Agent Knowledge and ZedBiz Biz Brain planning belongs in `ZedBiz44/ZedBiz-Biz-Brain-System`.
 - Once a workflow becomes this skill, this repo becomes the skill source of truth.
