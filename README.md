@@ -12,7 +12,8 @@ The canonical operating SOP is the Notion [Support-Doc-Ingestion-SOP](https://ap
 
 ## Repo Role
 
-- This repo stores the actual skill package, usage notes, templates, setup records, and the live documentation-research tracking records.
+- This repo is the authoring and tracking source for the skill, usage notes, templates, setup records, and live documentation-research records.
+- The generated deployable package is `dist/z-support-doc-ingestion/`; install that package, not the repository root.
 - This repo is not the warehouse for every scraped documentation page.
 - Finished documentation belongs in the researching agent’s individual wiki, following `/opt/openclaw/shared/knowledge/<agent-name>/wiki`.
 - Back-office tracking records in this repository tell coordinators who researched what, where it lives, what was transferred, and when it needs review. Research agents do not need GitHub access.
@@ -29,16 +30,26 @@ Typical install layout:
 <workspace>/skills/z-support-doc-ingestion/SKILL.md
 ```
 
-This repo keeps the installable skill at:
+The authoritative source files remain at the repository root. Build the minimal deployable package before installation:
+
+```bash
+scripts/build_package.sh
+```
+
+Then install:
 
 ```plain text
-SKILL.md
+dist/z-support-doc-ingestion/
 ```
 
 ## Main Files
 
-- `SKILL.md`: installable skill instructions.
-- `agents/openai.yaml`: Codex/OpenAI interface metadata.
+- `SKILL.md`: authoritative shared skill instructions.
+- `agents/openai.yaml`: authoritative Codex/OpenAI interface metadata.
+- `scripts/build_package.sh`: generates the minimal `dist/z-support-doc-ingestion/` deployable package.
+- `docs/implementation-profile.md`: ownership, platform, approval, and completion-evidence record.
+- `docs/security-rollback.md`: source boundaries, security review, rollback, and removal record.
+- `docs/pilot-test-record.md`: current-artifact discovery, trigger-test, and pilot evidence.
 - `docs/usage.md`: plain-English instructions for Jack and the research agent.
 - `docs/sop-reference.md`: SOP reference copy aligned with the Notion SOP.
 - `templates/assignment-record.md`: GitHub assignment record template.

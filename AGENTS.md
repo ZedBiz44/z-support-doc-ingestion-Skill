@@ -10,9 +10,10 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 
 ## Rules
 
-- Keep the installable skill in root `SKILL.md`.
-- Keep interface metadata in `agents/`.
-- Keep operator instructions and reference material in `docs/`.
+- Keep authoritative shared instructions in root `SKILL.md`.
+- Keep authoritative interface metadata in `agents/`.
+- Build `dist/z-support-doc-ingestion/` with `scripts/build_package.sh`; install only that generated package, not the repository root.
+- Keep operator instructions, implementation profile, security/rollback review, pilot-test record, and reference material in `docs/`.
 - Keep reusable GitHub tracking templates in `templates/`.
 - Keep activity notes in `activity-logs/`; use it only for repository maintenance history.
 - Coordinators, automations, or administrators store live research-task records in `assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, and `open-questions/`.
@@ -25,4 +26,4 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 
 ## Completion Standard
 
-A repo update is complete when `SKILL.md` remains valid, referenced files exist, no secrets are committed, and the change has a short activity record when operationally meaningful.
+A repo update is complete when the generated `dist/z-support-doc-ingestion/` package validates, referenced runtime files exist, no secrets are committed, required security and implementation records are current, and the change has a short activity record when operationally meaningful.
