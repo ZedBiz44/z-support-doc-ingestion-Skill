@@ -26,6 +26,8 @@ Initial validation of `ZedBiz44/z-support-doc-ingestion-Skill` after repo setup.
 - Live tracking folders present: pass (`assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, `open-questions/`)
 - Agent wiki index template present: pass
 - Canonical Notion SOP and repository reference copy are labeled: pass
+- Plain-English operator workflow documented: pass
+- Research-agent workflow does not require GitHub access: pass
 - No secrets or credentials intentionally added: pass
 
 ## Notes
