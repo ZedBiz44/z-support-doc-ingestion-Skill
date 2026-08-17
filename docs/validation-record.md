@@ -47,7 +47,8 @@ Status: Passed
 - Research-agent GitHub responsibility removed from active workflow language: pass
 - Notion SOP updated with optional-only back-office assignment and completed-research records: pass
 - Notion Skill page updated so compile/verify completion uses retrieval proof instead of GitHub test-result logging: pass
-- Live Wilma reinstall still required after commit to test the newest skill version: pending
+- Live Wilma reinstall completed under `z-support-doc-ingestion`: pass
+- Old Wilma `support-doc-ingestion` test install removed: pass
 
 ## Reference Links Checked
 

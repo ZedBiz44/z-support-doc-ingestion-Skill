@@ -11,6 +11,7 @@ Updated the support-doc-ingestion workflow to match the ZedBiz OpenClaw wiki set
 - Replaced agent-created practical questions with retrieval proof: search saved content, open at least one saved source or synthesis file, and report the search phrase, files found, and gaps.
 - Removed research-agent GitHub responsibility from active workflow language.
 - Updated the Notion SOP and Skill pages to remove the GitHub test-result contradiction and make back-office tracking records required only when tracking is being used.
+- Refreshed Wilma's live test install under the current skill name `z-support-doc-ingestion` and removed the older `support-doc-ingestion` test folder.
 
 ## Reason
 
