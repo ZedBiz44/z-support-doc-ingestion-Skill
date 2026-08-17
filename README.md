@@ -6,12 +6,16 @@ This repo is the version-controlled home for the `support-doc-ingestion` skill.
 
 The skill helps ZedBiz/OpenClaw agents research tool and program documentation, prove coverage, store the finished documentation in the right individual agent wiki, and log the work so other agents can find or request it later.
 
+## Source Of Truth
+
+The canonical operating SOP is the Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075). The repository file `docs/sop-reference.md` is a concise implementation reference only. If the two differ, the Notion SOP controls. Update the reference copy after an approved canonical SOP change.
+
 ## Repo Role
 
-- This repo stores the actual skill package, usage notes, templates, and setup records.
+- This repo stores the actual skill package, usage notes, templates, setup records, and the live documentation-research tracking records.
 - This repo is not the warehouse for every scraped documentation page.
 - Finished documentation belongs in the individual agent wiki, such as `/opt/openclaw/shared/knowledge/wilma/wiki` or `/opt/openclaw/shared/knowledge/amanda/wiki`.
-- GitHub tracking records tell us who researched what, where it lives, what was transferred, and when it needs review.
+- GitHub tracking records in this repository tell us who researched what, where it lives, what was transferred, and when it needs review.
 - Before a workflow becomes a real skill, related Agent Knowledge and ZedBiz Biz Brain planning belongs in `ZedBiz44/ZedBiz-Biz-Brain-System`.
 - Once a workflow becomes this skill, this repo becomes the skill source of truth.
 
@@ -40,7 +44,9 @@ SKILL.md
 - `templates/assignment-record.md`: GitHub assignment record template.
 - `templates/completed-research-record.md`: completed research record template.
 - `templates/transfer-record.md`: documentation transfer record template.
-- `activity-logs/`: repo setup and change history notes.
+- `templates/agent-wiki-index-record.md`: agent wiki ownership and location index template.
+- `assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, and `open-questions/`: permanent live documentation-research tracking folders.
+- `activity-logs/`: repo setup and change history notes, not research-task tracking.
 
 ## References
 

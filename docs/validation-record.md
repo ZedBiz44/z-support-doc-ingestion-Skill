@@ -22,11 +22,15 @@ Initial validation of `ZedBiz44/z-support-doc-ingestion-Skill` after repo setup.
 - Completed research template present: pass
 - Transfer template present: pass
 - Activity log present: pass
+- Permanent live tracking repository selected: pass (`ZedBiz44/z-support-doc-ingestion-Skill`)
+- Live tracking folders present: pass (`assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, `open-questions/`)
+- Agent wiki index template present: pass
+- Canonical Notion SOP and repository reference copy are labeled: pass
 - No secrets or credentials intentionally added: pass
 
 ## Notes
 
-This validation confirms packaging and content structure only. Live OpenClaw installation and `openclaw skills list` verification still need to be run on the target OpenClaw host or workspace where the skill will be installed.
+This validation confirms packaging, tracking-repository structure, and source-of-truth labels only. Live OpenClaw installation and `openclaw skills list` verification still need to be run on the target OpenClaw host or workspace where the skill will be installed.
 
 ## Reference Links Checked
 

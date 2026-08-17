@@ -90,15 +90,11 @@ The expected mix is roughly 70% website documentation, 20% Context7, and 10% PDF
 
 ## GitHub Tracking
 
-Use this repo for the skill package and templates:
+**Permanent live tracking repository:** [`ZedBiz44/z-support-doc-ingestion-Skill`](https://github.com/ZedBiz44/z-support-doc-ingestion-Skill).
 
-```plain text
-ZedBiz44/z-support-doc-ingestion-Skill
-```
+Use this repository for the skill package and for all live assignment, completed-research, agent-wiki-index, transfer, refresh, and open-question records. Use `activity-logs/` only for maintenance history of this repository, not as a fallback for research-task tracking.
 
-Use the active ZedBiz docs research tracking repo selected for the assignment to store live assignment, completed research, transfer, refresh, and open-question records. If no docs research tracking repo has been selected yet, record the assignment in this repo under `activity-logs/` and flag that a permanent tracking repo decision is needed.
-
-Recommended tracking structure:
+Required tracking structure:
 
 ```plain text
 assignments/

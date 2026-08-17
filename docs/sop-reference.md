@@ -2,6 +2,8 @@
 
 Date: 2026-08-17 | Agent: Cody | Status: Repo Reference Copy
 
+> **Canonical source:** The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the authoritative operating procedure. This file is a concise implementation reference. If the two differ, the Notion SOP controls.
+
 ## Purpose
 
 This SOP explains how ZedBiz agents research tool documentation, prove source coverage, store finished documentation in the correct agent wiki, and log the work so other agents can find or request it later.

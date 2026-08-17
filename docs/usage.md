@@ -8,6 +8,10 @@ Use this when you want an agent to make tool documentation usable inside an Open
 
 Plain-English version: it makes sure the agent checks the whole documentation set, stores the finished notes in the right agent wiki, proves the docs are searchable, and logs enough in GitHub so nobody repeats the same work later.
 
+## Live Tracking Repository
+
+Use [`ZedBiz44/z-support-doc-ingestion-Skill`](https://github.com/ZedBiz44/z-support-doc-ingestion-Skill) as the permanent live tracking repository. Create assignments, completed-research records, agent-wiki index records, transfer records, refresh records, and open questions in its top-level tracking folders. Do not use `activity-logs/` for research-task tracking.
+
 ## Quick TLDR
 
 - Pick the tool or program.
