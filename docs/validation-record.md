@@ -64,6 +64,7 @@ Status: Passed
 Status: Runtime migration passed; updated skill package deployment pending.
 
 - Active Wilma vault confirmed: pass (`/opt/openclaw/shared/knowledge/wiki`)
+- Rocky/VPS4 active vault pattern added: pass (`/home/openclaw/.openclaw/workspace/shared-memory-wiki`)
 - Unsupported arbitrary root namespace identified and prohibited: pass (`wiki/<agent>/` is not compiler-scanned)
 - Supported recursive content-type namespaces verified: pass (`sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`)
 - WpSpectra source, entity, concept, synthesis, and report pages migrated to `*/wilma/`: pass

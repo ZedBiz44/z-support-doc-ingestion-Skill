@@ -19,7 +19,7 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 | Decision | Value |
 |---|---|
 | Primary job | Research official support documentation, save source-backed knowledge in the active shared wiki under an agent-owned namespace, and prove live retrieval. |
-| Active wiki vault | `/opt/openclaw/shared/knowledge/wiki` |
+| Active wiki vault | Runtime-configured shared wiki vault reported by `openclaw wiki status`; common examples are `/opt/openclaw/shared/knowledge/wiki` and Rocky/VPS4's `/home/openclaw/.openclaw/workspace/shared-memory-wiki`. |
 | Agent-owned namespace | `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`, and `_attachments/<agent>/` when needed. |
 | Ownership metadata | `primaryAgent`, `owner`, and `scope: specialist-support-docs` on every support-documentation page. |
 | Intended users | ZedBiz OpenClaw agents performing assigned support-documentation research. |

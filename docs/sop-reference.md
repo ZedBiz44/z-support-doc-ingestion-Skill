@@ -26,10 +26,11 @@ Jack does not need to provide a wiki path, skill command, GitHub task, test ques
 
 - Check Context7 when useful, then use official documentation as the authority.
 - Discover the official documentation structure and cover meaningful product sections.
-- Save public reusable knowledge under the active vault `/opt/openclaw/shared/knowledge/wiki`.
+- Save public reusable knowledge under the runtime-configured active shared vault reported by `openclaw wiki status`.
+- Valid active shared vaults may differ by host; Rocky/VPS4 uses `/home/openclaw/.openclaw/workspace/shared-memory-wiki`.
 - Use only supported paths: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
 - Add `primaryAgent`, `owner`, and `scope: specialist-support-docs` to every support-documentation page.
-- Do not use `wiki/<agent>/`; the Memory Wiki compiler does not scan arbitrary root-level agent folders.
+- Use the standard content-type folders instead of root-level agent folders such as `wiki/<agent>/`, which sit outside the Memory Wiki compiler's scanned structure.
 - Run compile, lint, and a practical `openclaw wiki search` from the assigned agent’s live runtime. The result must return a page in that agent’s namespace.
 - Return what was learned, the namespace used, proof paths, validation result, and meaningful gaps.
 

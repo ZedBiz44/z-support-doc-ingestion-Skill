@@ -16,7 +16,7 @@ Date: 2026-08-17 | Reviewer: Manus | Status: Pilot Pending
 
 | Review point | Decision and evidence |
 |---|---|
-| Allowed file locations | Public reusable vendor documentation belongs in the active shared vault: `/opt/openclaw/shared/knowledge/wiki/{sources,entities,concepts,syntheses,reports}/<agent-name>/`. |
+| Allowed file locations | Public reusable vendor documentation belongs in the runtime-configured active shared vault under `{sources,entities,concepts,syntheses,reports}/<agent-name>/`. Confirm the vault path with `openclaw wiki status`; examples include `/opt/openclaw/shared/knowledge/wiki` and Rocky/VPS4's `/home/openclaw/.openclaw/workspace/shared-memory-wiki`. |
 | Ownership metadata | Every support-documentation page carries `primaryAgent`, `owner`, and `scope: specialist-support-docs`. Ownership is organizational, not access isolation. |
 | Restricted material | Private, client-sensitive, paid, or login-gated documentation uses an approved restricted store. It must not enter the shared vault without explicit approval. |
 | Transfer boundary | Same-VPS public vendor knowledge is reused through shared-vault search, not copied between agents. Cross-VPS or restricted-store transfers require coordinator direction and exclude `.openclaw-wiki/cache/`. |

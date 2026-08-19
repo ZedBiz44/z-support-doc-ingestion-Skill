@@ -19,9 +19,10 @@ An official documentation link may be included. Find it when absent. Ask only wh
 
 ## Core Rules
 
-- Save reusable public vendor documentation in the **active shared wiki vault**: `/opt/openclaw/shared/knowledge/wiki`.
+- Save reusable public vendor documentation in the **active shared wiki vault reported by `openclaw wiki status`**.
+- Common active vaults include `/opt/openclaw/shared/knowledge/wiki` on shared OpenClaw hosts and `/home/openclaw/.openclaw/workspace/shared-memory-wiki` on Rocky/VPS4.
 - Keep ownership by using the supported content-type namespace: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
-- Do **not** use an arbitrary root folder such as `wiki/<agent>/`; the compiler does not index it.
+- Use the standard top-level content folders. Arbitrary root folders such as `wiki/<agent>/` are outside the compiler's indexed structure.
 - Add `primaryAgent`, `owner`, and `scope: specialist-support-docs` to every support-documentation page.
 - Use flat, tool-prefixed filenames inside the agent namespace, such as `entities/wilma/wpspectra_product_and_plugin_family.md`.
 - Check Context7 first when available. Official documentation remains authoritative.
@@ -76,10 +77,13 @@ For source-backed pages, also preserve source URL, source type, capture date, ca
 
 ### Validate Through the Live Runtime
 
-First confirm that `openclaw wiki status` reports the active shared vault:
+First confirm that `openclaw wiki status` reports a ready shared vault and record the actual vault path. Use that path for all saved files.
+
+Accepted examples:
 
 ```text
 /opt/openclaw/shared/knowledge/wiki
+/home/openclaw/.openclaw/workspace/shared-memory-wiki
 ```
 
 Run the applicable checks in the assigned agent’s live runtime:
@@ -92,7 +96,7 @@ openclaw wiki lint
 openclaw wiki search "relevant tool question" --mode source-evidence
 ```
 
-A direct file search, a compile run from a different folder, or a personal folder that is not the active runtime vault is **not** retrieval proof. Search must return a saved page from the agent namespace in the active shared vault. Open at least one returned source or synthesis page and record the search phrase, paths found, and known gaps.
+A direct file search, a compile run from a different folder, or a folder that is not the active runtime vault is not retrieval proof. Search must return a saved page from the agent namespace in the active shared vault. Open at least one returned source or synthesis page and record the search phrase, paths found, and known gaps.
 
 ### Return the Completion Summary
 
@@ -120,7 +124,7 @@ Stop and ask when:
 - The product, official source, or research scope is unclear.
 - Documentation is login-gated, paid, private, client-sensitive, or access-restricted.
 - The content needs a restricted store rather than the shared vault.
-- The active vault is not the shared wiki or the agent namespace cannot be confirmed.
+- `openclaw wiki status` is unavailable, the active shared vault cannot be confirmed, or the agent namespace cannot be confirmed.
 - Coverage cannot be reasonably established.
 - Compile, lint, or live search fails.
 - Supplemental sources conflict with official documentation and the correct answer is unclear.
