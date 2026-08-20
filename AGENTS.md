@@ -1,6 +1,6 @@
 # Repository Operating Instructions
 
-Date: 2026-08-17 | Agent: Cody | Status: Active
+Date: 2026-08-20 | Agent: Cody | Status: Active
 
 ## Purpose
 
@@ -19,7 +19,8 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 - Coordinators, automations, or administrators store live research-task records in `assignments/`, `completed-research/`, `agent-wiki-index/`, `transfer-log/`, `refresh-needed/`, and `open-questions/`.
 - Research agents do not need GitHub access; they return concise completion or transfer summaries to the coordinator.
 - Do not store scraped vendor documentation, private client documentation, secrets, tokens, environment files, or full wiki exports in this repo.
-- Store public reusable support documentation in the active shared wiki under the correct supported agent namespace: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, or `reports/<agent>/`. Do not use an arbitrary root-level `wiki/<agent>/` folder.
+- Store public reusable support documentation for this skill only in the approved VPS1 active shared wiki under the correct supported agent namespace: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, or `reports/<agent>/`.
+- Route VPS2 agents, VPS3/Hermes agents, Rocky/VPS4 agents, mirrored wiki setups, custom knowledge stores, and agent-local wiki setups to `z-agent-knowledge-mapper`.
 - Use GitHub tracking records to point to shared-vault namespaces, ownership metadata, coverage evidence, cross-VPS or restricted transfers, and refresh rules.
 - For pre-skill Agent Knowledge or ZedBiz Biz Brain planning, use `ZedBiz44/ZedBiz-Biz-Brain-System` instead of this repo.
 - Verify OpenClaw command syntax against the active host before running bulk wiki ingest, compile, lint, or transfer operations.

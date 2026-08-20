@@ -1,4 +1,4 @@
 interface:
   display_name: "Z Support Doc Ingestion"
   short_description: "Research official docs and build verified wiki expertise"
-  default_prompt: "Use $z-support-doc-ingestion for official help centres, support docs, or support videos in your shared-wiki namespace."
+  default_prompt: "Use $z-support-doc-ingestion for VPS1 shared-wiki official help centres, support docs, or support videos."

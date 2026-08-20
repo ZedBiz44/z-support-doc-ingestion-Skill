@@ -1,19 +1,21 @@
 # Support Doc Ingestion SOP Reference
 
-Date: 2026-08-17 | Agent: Manus | Status: Shared-Vault Reference
+Date: 2026-08-20 | Agent: Cody | Status: VPS1 Shared-Vault Reference
 
 > **Authority split:** The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea8188d1030c070075) is the operational source for assignment, approval, ownership, and completion. This repository is the technical source for skill instructions, metadata, generated package, and validation evidence. This file is a concise operational reference.
 
 ## Purpose
 
-Make one chosen agent the reliable in-house expert for a tool, platform, plugin, API, or program without splitting its live retrieval from shared ZedBiz knowledge. Reusable public vendor documentation belongs in the active shared wiki under the research agent’s supported namespace, not in GitHub or a second unsearchable vault.
+Make one chosen VPS1 shared-wiki OpenClaw agent the reliable in-house expert for a tool, platform, plugin, API, or program without splitting its live retrieval from shared ZedBiz knowledge. Reusable public vendor documentation belongs in the approved VPS1 active shared wiki under the research agent’s supported namespace, not in GitHub or a second unsearchable vault.
+
+For VPS2 agents, VPS3/Hermes agents, Rocky/VPS4 agents, agent-local wiki setups, mirrored wiki setups, or custom knowledge stores, use `z-agent-knowledge-mapper` instead.
 
 ## Roles
 
 | Role | Responsibility |
 |---|---|
 | Jack or task owner | Gives a plain-English research instruction to the agent who should become the expert. |
-| Research agent | Researches, saves source-backed knowledge in its shared-vault namespace, validates live retrieval, and returns a concise completion summary. It does not use GitHub. |
+| Research agent | Researches, saves source-backed knowledge in its VPS1 shared-vault namespace, validates live retrieval, and returns a concise completion summary. It does not use GitHub. |
 | Coordinator, automation, or administrator | Maintains optional tracking and handles approved cross-VPS or restricted-store transfers. |
 
 ## Simple Assignment
@@ -26,17 +28,19 @@ Jack does not need to provide a wiki path, skill command, GitHub task, test ques
 
 - Check Context7 when useful, then use official documentation as the authority.
 - Discover the official documentation structure and cover meaningful product sections.
-- Save public reusable knowledge under the runtime-configured active shared vault reported by `openclaw wiki status`.
-- Valid active shared vaults may differ by host; Rocky/VPS4 uses `/home/openclaw/.openclaw/workspace/shared-memory-wiki`.
+- Save public reusable knowledge under the approved VPS1 active shared vault reported by `openclaw wiki status`.
+- Route non-VPS1, Hermes, Rocky/VPS4, mirrored, custom, or agent-local wiki environments to `z-agent-knowledge-mapper`.
 - Use only supported paths: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
 - Add `primaryAgent`, `owner`, and `scope: specialist-support-docs` to every support-documentation page.
+- Capture reusable building blocks such as procedures, prerequisites, permissions, decision points, validation steps, failure conditions, manual fallbacks, UI friction, automation opportunities, and material prompts or configurations.
+- Evaluate both technical and human-operator tracks. Finished guides or SOPs are created only when the assignment asks for them.
 - Use the standard content-type folders instead of root-level agent folders such as `wiki/<agent>/`, which sit outside the Memory Wiki compiler's scanned structure.
 - Run compile, lint, and a practical `openclaw wiki search` from the assigned agent’s live runtime. The result must return a page in that agent’s namespace.
 - Return what was learned, the namespace used, proof paths, validation result, and meaningful gaps.
 
 ## Documentation Reuse
 
-Public vendor documentation in the shared active vault is already searchable by authorized agents. Reuse it through live search instead of copying files between agents on the same VPS.
+Public vendor documentation in the VPS1 shared active vault is already searchable by authorized agents on that environment. Reuse it through live search instead of copying files between agents on the same VPS1 shared-wiki environment.
 
 Use approved transfer only for another VPS or a restricted private store. Exclude `.openclaw-wiki/cache/` and validate the destination’s active runtime.
 

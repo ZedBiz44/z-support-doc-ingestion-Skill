@@ -18,13 +18,13 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 
 | Decision | Value |
 |---|---|
-| Primary job | Research official support documentation, save source-backed knowledge in the active shared wiki under an agent-owned namespace, and prove live retrieval. |
-| Active wiki vault | Runtime-configured shared wiki vault reported by `openclaw wiki status`; common examples are `/opt/openclaw/shared/knowledge/wiki` and Rocky/VPS4's `/home/openclaw/.openclaw/workspace/shared-memory-wiki`. |
+| Primary job | Research official support documentation for VPS1 shared-wiki OpenClaw agents, save source-backed knowledge in the approved active shared wiki under an agent-owned namespace, and prove live retrieval. |
+| Active wiki vault | Runtime-configured approved VPS1 shared wiki vault reported by `openclaw wiki status`; normal expected path is `/opt/openclaw/shared/knowledge/wiki` unless the VPS1 implementation profile names another shared vault. |
 | Agent-owned namespace | `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`, and `_attachments/<agent>/` when needed. |
 | Ownership metadata | `primaryAgent`, `owner`, and `scope: specialist-support-docs` on every support-documentation page. |
-| Intended users | ZedBiz OpenClaw agents performing assigned support-documentation research. |
+| Intended users | ZedBiz VPS1 shared-wiki OpenClaw agents performing assigned support-documentation research. |
 | Positive triggers | Learn, research, refresh, verify, or reuse support documentation for a tool, platform, plugin, API, or workflow. |
-| Non-triggers | One-off operational work, a request to use a tool without researching it, unrelated document editing, or private-content ingestion without approval. |
+| Non-triggers | One-off operational work, a request to use a tool without researching it, unrelated document editing, private-content ingestion without approval, VPS2 agents, VPS3/Hermes agents, Rocky/VPS4 agents, agent-local wiki setups, or custom/mirrored wiki setups. |
 | Included actions | Public documentation research, wiki entry creation, live retrieval proof, and coordinator-approved cross-VPS or restricted-store transfer. |
 | Excluded actions | Login-gated or private content without approval, credentials, client-sensitive materials, plugin/service development, and production system changes. |
 
@@ -56,7 +56,7 @@ Date: 2026-08-17 | Prepared by: Manus | Status: Pilot Pending
 |---|---|
 | Security review | `docs/security-rollback.md` |
 | Approved data and sources | Public official documentation, Context7, approved supplemental public sources, and approved local wiki content. |
-| Execution boundary | The active shared wiki’s supported agent namespaces and coordinator-supplied cross-VPS or restricted-store transfer targets. |
+| Execution boundary | The approved VPS1 active shared wiki’s supported agent namespaces and coordinator-supplied cross-VPS or restricted-store transfer targets. |
 | Last known-good commit | To be established by the first successful fresh pilot of the `z-support-doc-ingestion` package. |
 | Rollback owner | Jack or designated technical administrator. |
 | Rollback procedure | Remove or replace only the pilot package at its verified skills-root location, refresh the agent’s skill list or session, and preserve the authoring repository and evidence. Wiki migrations retain a verified backup until live retrieval succeeds. |

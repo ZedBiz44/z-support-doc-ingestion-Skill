@@ -16,10 +16,10 @@ Date: 2026-08-17 | Reviewer: Manus | Status: Pilot Pending
 
 | Review point | Decision and evidence |
 |---|---|
-| Allowed file locations | Public reusable vendor documentation belongs in the runtime-configured active shared vault under `{sources,entities,concepts,syntheses,reports}/<agent-name>/`. Confirm the vault path with `openclaw wiki status`; examples include `/opt/openclaw/shared/knowledge/wiki` and Rocky/VPS4's `/home/openclaw/.openclaw/workspace/shared-memory-wiki`. |
+| Allowed file locations | Public reusable vendor documentation belongs in the approved VPS1 runtime-configured active shared vault under `{sources,entities,concepts,syntheses,reports}/<agent-name>/`. Confirm the vault path with `openclaw wiki status`; the normal expected VPS1 path is `/opt/openclaw/shared/knowledge/wiki` unless the VPS1 implementation profile names another shared vault. |
 | Ownership metadata | Every support-documentation page carries `primaryAgent`, `owner`, and `scope: specialist-support-docs`. Ownership is organizational, not access isolation. |
 | Restricted material | Private, client-sensitive, paid, or login-gated documentation uses an approved restricted store. It must not enter the shared vault without explicit approval. |
-| Transfer boundary | Same-VPS public vendor knowledge is reused through shared-vault search, not copied between agents. Cross-VPS or restricted-store transfers require coordinator direction and exclude `.openclaw-wiki/cache/`. |
+| Transfer boundary | Same-VPS1 public vendor knowledge is reused through shared-vault search, not copied between agents. Cross-VPS, Hermes, Rocky/VPS4, mirrored, custom, agent-local, or restricted-store workflows require coordinator direction and should use the appropriate mapper or platform-specific route. Transfers exclude `.openclaw-wiki/cache/`. |
 | Secrets process | Use approved platform credential mechanisms when needed. Never write credential values into wiki files, repository records, prompts, or logs. |
 | Approval gates | Require approval for private-content handling, restricted-store transfers, privilege changes, production deployment, remote publication, and wider rollout. |
 | Validation requirements | Compile, lint, live runtime search, retrieval proof, current-package discovery, trigger tests, and pilot evidence where applicable. |

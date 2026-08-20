@@ -1,15 +1,17 @@
 ---
 name: z-support-doc-ingestion
-description: "Use when asked to become an in-house expert: research official help centres, support articles, tutorials, or videos and save verified shared-wiki guidance."
+description: "Use for VPS1 shared-wiki OpenClaw agents asked to research official docs, support articles, tutorials, or videos and save verified support knowledge."
 ---
 
 # Support Doc Ingestion
 
 ## Your Job
 
-Use this skill when you are asked to work through an official help centre, support articles, documentation site, knowledge base, tutorial library, or support video to become the in-house expert for a tool, platform, program, plugin, API, or workflow.
+Use this skill when a VPS1 shared-wiki OpenClaw agent is asked to work through an official help centre, support articles, documentation site, knowledge base, tutorial library, or support video to become the in-house expert for a tool, platform, program, plugin, API, or workflow.
 
-Research the official documentation, save useful knowledge in the **active ZedBiz shared wiki** under your agent-owned namespace, prove the running agent can retrieve it, and return a concise completion summary. GitHub tracking and administrative records belong to a coordinator, automation, or administrator, not the research agent.
+Research the official documentation, save useful knowledge in the approved **VPS1 active shared wiki** under your agent-owned namespace, prove the running agent can retrieve it, and return a concise completion summary. GitHub tracking and administrative records belong to a coordinator, automation, or administrator, not the research agent.
+
+For VPS2 agents, VPS3/Hermes agents, Rocky/VPS4 agents, or any agent-local/custom wiki setup, route the assignment to `z-agent-knowledge-mapper` instead. This skill is the VPS1 shared-wiki worker, not the portable mapper for every OpenClaw-style runtime.
 
 ## What a Normal Assignment Looks Like
 
@@ -19,8 +21,8 @@ An official documentation link may be included. Find it when absent. Ask only wh
 
 ## Core Rules
 
-- Save reusable public vendor documentation in the **active shared wiki vault reported by `openclaw wiki status`**.
-- Common active vaults include `/opt/openclaw/shared/knowledge/wiki` on shared OpenClaw hosts and `/home/openclaw/.openclaw/workspace/shared-memory-wiki` on Rocky/VPS4.
+- Save reusable public vendor documentation in the **approved VPS1 shared wiki vault reported by `openclaw wiki status`**.
+- The normal approved VPS1 shared vault is `/opt/openclaw/shared/knowledge/wiki`, unless the current VPS1 implementation profile names another shared vault.
 - Keep ownership by using the supported content-type namespace: `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
 - Use the standard top-level content folders. Arbitrary root folders such as `wiki/<agent>/` are outside the compiler's indexed structure.
 - Add `primaryAgent`, `owner`, and `scope: specialist-support-docs` to every support-documentation page.
@@ -29,6 +31,7 @@ An official documentation link may be included. Find it when absent. Ask only wh
 - Keep source links, warnings, limits, authentication details, version notes, and deprecation notices.
 - Keep public reusable vendor documentation in the shared vault. Keep private client, paid, login-gated, or sensitive material in an approved restricted store.
 - Report completion only after active-vault compile, lint, live runtime search, and retrieval proof pass.
+- If the active vault is agent-local, mirrored, custom, Hermes-native, or outside the VPS1 shared-wiki model, use `z-agent-knowledge-mapper` for the assignment.
 
 ## Where Knowledge Goes
 
@@ -49,7 +52,38 @@ The Memory Wiki compiler recursively discovers pages inside these standard secti
 
 Check Context7 first when available. Then find the official documentation home, navigation, sitemap, API references, guides, troubleshooting material, changelog, release notes, and downloadable manuals.
 
+Go beyond surface pages. Follow relevant links and indexes until the coverage plan is satisfied or a clear gap remains.
+
 Use at least two discovery methods when practical. Use supplementary PDFs, blogs, community discussions, and videos only when they add value. Label supplemental material clearly and prefer official documentation when sources conflict.
+
+### Capture Operational Reuse Signals
+
+Save the building blocks that make the documentation useful later:
+
+- repeatable procedures;
+- prerequisites and permissions;
+- roles and responsibilities;
+- decision points;
+- inputs and expected outputs;
+- validation steps;
+- exceptions and failure conditions;
+- manual fallbacks;
+- undocumented workarounds;
+- recurring questions and misunderstandings;
+- user-interface friction;
+- automation opportunities;
+- configurations or prompts that materially affect results.
+
+Capture meaningful discoveries at checkpoints, not every action. Preserve verified workarounds, important decisions, and reusable operational knowledge. Create finished SOPs, training guides, or customer-facing guides only when the assignment asks for that deliverable.
+
+### Cover Both Tracks
+
+For tools, platforms, and operational workflows, evaluate both tracks:
+
+- **Technical track:** APIs, MCP tools, schemas, authentication, rate limits, constraints, errors, automation patterns, and code examples.
+- **Human track:** dashboards, UI screens, settings, permissions, manual workflows, prompt techniques, troubleshooting, and operating decisions.
+
+When one track is not available or not relevant, record that as not applicable or as a coverage gap.
 
 ### Process Official Support Videos
 
@@ -77,13 +111,12 @@ For source-backed pages, also preserve source URL, source type, capture date, ca
 
 ### Validate Through the Live Runtime
 
-First confirm that `openclaw wiki status` reports a ready shared vault and record the actual vault path. Use that path for all saved files.
+First confirm that `openclaw wiki status` reports a ready approved VPS1 shared vault and record the actual vault path. Use that path for all saved files.
 
-Accepted examples:
+Accepted VPS1 example:
 
 ```text
 /opt/openclaw/shared/knowledge/wiki
-/home/openclaw/.openclaw/workspace/shared-memory-wiki
 ```
 
 Run the applicable checks in the assigned agent’s live runtime:
@@ -103,7 +136,8 @@ A direct file search, a compile run from a different folder, or a folder that is
 Report:
 
 - The tool or support area researched.
-- What was learned and the shared-vault namespace used.
+- What was learned, including the key operational reuse signals and any technical or human-track gaps.
+- The shared-vault namespace used.
 - Confirmation that compile, lint, live search, and retrieval proof passed.
 - The search phrase, returned paths, and at least one opened saved page.
 - Important gaps, blocked pages, or limits, or a clear statement that none are known.
@@ -124,7 +158,8 @@ Stop and ask when:
 - The product, official source, or research scope is unclear.
 - Documentation is login-gated, paid, private, client-sensitive, or access-restricted.
 - The content needs a restricted store rather than the shared vault.
-- `openclaw wiki status` is unavailable, the active shared vault cannot be confirmed, or the agent namespace cannot be confirmed.
+- `openclaw wiki status` is unavailable, the approved VPS1 active shared vault cannot be confirmed, or the agent namespace cannot be confirmed.
+- The agent is on VPS2, VPS3/Hermes, Rocky/VPS4, an agent-local wiki, a mirrored wiki, or any custom wiki setup that belongs in `z-agent-knowledge-mapper`.
 - Coverage cannot be reasonably established.
 - Compile, lint, or live search fails.
 - Supplemental sources conflict with official documentation and the correct answer is unclear.

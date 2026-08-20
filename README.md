@@ -4,7 +4,9 @@ Date: 2026-08-17 | Agent: Cody and Manus | Status: Shared-Vault Model
 
 This repo is the version-controlled home for the `z-support-doc-ingestion` skill.
 
-The skill helps ZedBiz/OpenClaw agents research tool and program documentation, prove coverage, save public reusable knowledge in the active shared wiki under an agent-owned namespace, and report completion without requiring research agents to use GitHub.
+The skill helps ZedBiz VPS1 shared-wiki OpenClaw agents research tool and program documentation, prove coverage, save public reusable knowledge in the approved active shared wiki under an agent-owned namespace, and report completion without requiring research agents to use GitHub.
+
+Use `z-agent-knowledge-mapper` instead for VPS2 agents, VPS3/Hermes agents, Rocky/VPS4 agents, agent-local wiki setups, mirrored wiki setups, or custom knowledge stores.
 
 ## Source Of Truth
 
@@ -15,10 +17,10 @@ The Notion [Support-Doc-Ingestion-SOP](https://app.notion.com/p/389a3e33d58180ea
 - This repo is the authoring and tracking source for the skill, usage notes, templates, setup records, and live documentation-research records.
 - The generated deployable package is `dist/z-support-doc-ingestion/`; install that package, not the repository root.
 - This repo is not the warehouse for every scraped documentation page.
-- Public reusable vendor documentation belongs in the active shared wiki, organized under `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
+- Public reusable vendor documentation belongs in the approved VPS1 active shared wiki, organized under `sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, and `reports/<agent>/`.
 - Agent ownership is expressed through the supported namespace and page metadata: `primaryAgent`, `owner`, and `scope: specialist-support-docs`.
 - Private, client-sensitive, paid, or login-gated material belongs in an approved restricted store, not the shared vault.
-- Same-VPS reuse occurs through shared-vault search. Cross-VPS and restricted-store transfers remain a coordinator responsibility.
+- Same-VPS1 shared-wiki reuse occurs through shared-vault search. Cross-VPS and restricted-store transfers remain a coordinator responsibility.
 - Back-office tracking records in this repository tell coordinators who researched what, where it lives, what was transferred, and when it needs review. Research agents do not need GitHub access.
 - Before a workflow becomes a real skill, related Agent Knowledge and ZedBiz Biz Brain planning belongs in `ZedBiz44/ZedBiz-Biz-Brain-System`.
 - Once a workflow becomes this skill, this repo becomes the skill source of truth.

@@ -61,10 +61,10 @@ Status: Passed
 
 ## 2026-08-17 Shared-Vault Namespace Update
 
-Status: Runtime migration passed; updated skill package deployment pending.
+Status: Superseded by 2026-08-20 VPS1-only scope correction.
 
 - Active Wilma vault confirmed: pass (`/opt/openclaw/shared/knowledge/wiki`)
-- Rocky/VPS4 active vault pattern added: pass (`/home/openclaw/.openclaw/workspace/shared-memory-wiki`)
+- Rocky/VPS4 active vault pattern added: superseded; Rocky/VPS4 now routes to `z-agent-knowledge-mapper`
 - Unsupported arbitrary root namespace identified and prohibited: pass (`wiki/<agent>/` is not compiler-scanned)
 - Supported recursive content-type namespaces verified: pass (`sources/<agent>/`, `entities/<agent>/`, `concepts/<agent>/`, `syntheses/<agent>/`, `reports/<agent>/`)
 - WpSpectra source, entity, concept, synthesis, and report pages migrated to `*/wilma/`: pass
@@ -75,3 +75,19 @@ Status: Runtime migration passed; updated skill package deployment pending.
 - Shared ZedBiz retrieval regression test: pass
 - Generated indexes and internal links: pass
 - Updated `dist/z-support-doc-ingestion/` build, Wilma installation, and fresh trigger testing: pending
+
+## 2026-08-20 VPS1 Scope Correction
+
+Status: Source and package validation passed; target-platform pilot remains required before any wider deployment.
+
+- `z-support-doc-ingestion` scoped to VPS1 shared-wiki OpenClaw agents: pass
+- VPS2, VPS3/Hermes, Rocky/VPS4, mirrored, custom, and agent-local wiki setups routed to `z-agent-knowledge-mapper`: pass
+- Rocky/VPS4 shared-memory-wiki example removed from current runtime instructions: pass
+- Operational reuse signals added as durable-capture importance criteria: pass
+- Dual technical and human-operator track coverage added: pass
+- Finished SOP or guide creation limited to assignments that specifically request that deliverable: pass
+- Active-vault validation remains required through the live runtime before completion: pass
+- Generated `dist/z-support-doc-ingestion/SKILL.md` refreshed from source: pass
+- Canonical structural validator passed for `dist/z-support-doc-ingestion`: pass
+- `git diff --check` passed: pass
+- Local note: Windows desktop has no installed WSL distribution, so the Linux shell build script could not run here. The generated package was refreshed with the equivalent local copy operation and then validated.
