@@ -55,3 +55,27 @@ Date: 2026-08-17 | Tester: Pending | Status: Planned
 - Reviewer: Pending
 - Approver: Jack
 - Deployment decision: Pilot only pending test completion
+
+## 2026-08-20 VPS1 Fleet Rollout
+
+Date: 2026-08-20 | Tester: Cody | Status: VPS1 rollout passed
+
+| Field | Value |
+|---|---|
+| Tested source commit | `f86ff1c` |
+| Clean staged package | `z-support-doc-ingestion` with `SKILL.md` and `agents/openai.yaml` |
+| Approved scope | VPS1 shared-wiki OpenClaw agents only |
+| Installed agents | Amanda, Edith, Gohzed, Grogar, Inga, Maggie, Marsha, Terry, Victor, Vivian, Wilma |
+| Install path in containers | `/home/node/.openclaw/workspace/skills/z-support-doc-ingestion` |
+| VPS1 backup path | `/tmp/zedbiz-skill-backups-20260820-125836` |
+| Non-VPS1 result | Not installed on VPS2, Rocky/VPS4, or Ruby/Hermes |
+
+Validation evidence:
+
+- Local staged package passed the canonical structural validator before deployment.
+- VPS1 `openclaw skills list` reported `z-support-doc-ingestion` as ready for all 11 target agents.
+- VPS2 Frank, Harry, and Suzy were checked and `z-support-doc-ingestion` was absent.
+- Rocky/VPS4 and Ruby/Hermes were checked and `z-support-doc-ingestion` was absent.
+- Live installed `SKILL.md` descriptions include the VPS1 shared-wiki scope language.
+
+Deployment decision: approved VPS1 fleet rollout complete. Wider non-VPS1 rollout remains routed to `z-agent-knowledge-mapper`.
