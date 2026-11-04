@@ -145,6 +145,12 @@ Report:
 
 If a major documentation section was skipped, report the work as **partial**.
 
+## Close Out Source Working Copies
+
+- Keep temporary downloads, screenshots, OCR output and intermediate exports in a dedicated per-job scratch folder.
+- Open the saved knowledge record and verify its source links and retained evidence before clearing the job’s disposable copies. Keep unique evidence and anything required for review, retry or audit. If verification fails, preserve the local copy and report what is pending.
+- Remove only identified files created for the job. Leave shared storage, backups and agent-managed attachment folders alone.
+
 ## Reuse and Transfers
 
 Public reusable support documentation in the shared vault is already available to authorized agents. Reuse it through live search; do not copy it between agents on the same VPS.
